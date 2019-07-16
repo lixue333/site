@@ -1,4 +1,10 @@
 @media screen and (min-width: 769px) {
+    .swiper-small{
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+    }
     .banner_box{
         width: 100%;
         min-width: 1366px;
@@ -7,6 +13,7 @@
         background-size: 1920px 729px;
         background-position: center;
         margin-top: -53px;
+        overflow: hidden;
     }
     .pushi_center_box{
         width: 1200px;
@@ -278,7 +285,7 @@
         display: flex;
     }
     .case_carousel .banner{
-
+        transition: all .5s;
         display: flex;
     }
     .case_carousel .banner li{
@@ -287,7 +294,7 @@
     }
     .case_carousel .banner li img{
         width: 1150px;
-        height: 590px;
+        /* height: 590px; */
     }
     .case_carousel .list{
         width: 1150px;
@@ -307,7 +314,7 @@
         font-family:SourceHanSansCN-Heavy;
         font-weight:400;
     }
-    .case_carousel .list a.active{
+    .case_carousel .active a{
         color: #FFB400;
         font-family:SourceHanSansCN-Heavy;
         font-weight:800;

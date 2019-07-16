@@ -338,37 +338,37 @@
                 </div>
                 <ul class='list'>
                     <li class='active'>
-                        <a href="#" class="active">大型发布会</a>
+                        <a href="javascript:;" class="active">大型发布会</a>
                     </li>
                     <li>
-                        <a href="#">会议论坛</a>
+                        <a href="javascript:;">会议论坛</a>
                     </li>
                     <li>
-                        <a href="#">婚礼跟拍</a>
+                        <a href="javascript:;">婚礼跟拍</a>
                     </li>
                     <li>
-                        <a href="#">节目录制</a>
+                        <a href="javascript:;">节目录制</a>
                     </li>
                     <li>
-                        <a href="#">课程讲座</a>
+                        <a href="javascript:;">课程讲座</a>
                     </li>
                     <li>
-                        <a href="#">庆典年会</a>
+                        <a href="javascript:;">庆典年会</a>
                     </li>
                     <li>
-                        <a href="#">沙龙趴体</a>
+                        <a href="javascript:;">沙龙趴体</a>
                     </li>
                     <li>
-                        <a href="#">体育赛事</a>
+                        <a href="javascript:;">体育赛事</a>
                     </li>
                     <li>
-                        <a href="#">团队旅行</a>
+                        <a href="javascript:;">团队旅行</a>
                     </li>
                     <li>
-                        <a href="#">文艺演出</a>
+                        <a href="javascript:;">文艺演出</a>
                     </li>
                     <li>
-                        <a href="#">展览展销</a>
+                        <a href="javascript:;">展览展销</a>
                     </li>
                 </ul>
                 <div class="left"><i class=' iconfont iconchevron-left'></i> </div>
@@ -625,10 +625,12 @@
             renderBullet: true,
             pagination: '.swiper-pagination',
             renderBullet: function (index, className) {
-                return '<span class="' + className + '"><image src="./img/pc/index/banner' + (index + 1) + '.png"></span>';
+                return '<div class="' + className + '" ><div class="swiper-small" style="background-image:url(./img/pc/index/banner'+(index+1)+'.png);" ></div></div>';
             },
         },
     });
+
+    
 
     /*新闻hover*/
     $(".news ul li ").hover(function () {
@@ -636,124 +638,80 @@
         $(".news li").eq(index).find('.coverbg').fadeIn(100);
     }, function () {
         var index = $(this).index();
-        $(".news li").eq(index).find('.coverbg').fadeOut(100);
+        $(".news li").eq(caseIndex).find('.coverbg').fadeOut(100);
     });
+
+   
     /*案例轮播*/
-
-    var onOff = true;
-    var box = document.querySelector('.box');
-    var banner = document.querySelector('.carousel_wrap');
-    var oLi = banner.querySelectorAll('li');
-    console.log(oLi.length);
-    var list = document.querySelector('.list');
-    var listLi = list.querySelectorAll('li');
-    var Left = document.querySelector('.left');
-    var Right = document.querySelector('.right');
-    var bannerUl = document.querySelectorAll(".banner");
-    var bannerLength = bannerUl.length;
-    var oneSize = oLi[0].offsetWidth;
-
-    console.log(oneSize);
-    var children = banner.children;
-    var child = list.children;
-
-    var lastChild = oLi[oLi.length - 1];
-    var firstChild = oLi[0];
-    bannerUl[bannerLength - 1].appendChild(firstChild.cloneNode(true));
-    console.log(bannerLength + '////');
-    console.log(bannerLength - 1)
-    bannerUl[0].insertBefore(lastChild.cloneNode(true), firstChild);
-    console.log(lastChild);
-    banner.style.width = oLi.length * oneSize + 'px';
-    banner.style.left = '-' + oneSize + 'px';
-    var timer = null;
-    var index = 0;
-    var listIndex = 1;
-    timer = setInterval(function () {
-        auto();
-    }, 2000)
-    // for (var i = 0; i < oLi.length; i++) {
-    //     listLi[i].index = i;
-    //     listLi[i].onclick = function () {
-    //         clearInterval(timer);
-    //         console.log(this.index);
-    //         listLi[index].setAttribute('class', '');
-    //         this.setAttribute('class', 'active');
-    //         index = this.index;
-    //         banner.style.transition = '0.5s';
-    //         banner.style.left = -(index + 1) * oneSize + 'px';
-    //     }
-    // }
-    function auto() {
-        if (onOff) {
-
-            onOff = false;
-            //  listLi[index].setAttribute('class', '');
-            index++;
-            listIndex++;
-            index %= oLi.length;
-            //listLi[index].setAttribute('class', 'active');
-            banner.style.transition = '0.5s';
-            banner.style.left = -(listIndex) * oneSize + 'px';
-            console.log(listIndex);
-            console.log(oLi.length - 1)
-            if (listIndex >= oLi.length - 1) {
-                onOff = false;
-                setTimeout(function () {
-                    banner.style.transition = 'none';
-                    listIndex = 1;
-                    banner.style.left = -(listIndex) * oneSize + 'px';
-                }, 500)
-            }
-            setTimeout(function () {
-                onOff = true;
-            }, 500)
-
+    var caseIndex = 0
+    
+    $('.list li').click(function(){
+        caseIndex = $(this).index()
+        swiper = new swiperCase()
+    })
+    function swiperCase(){
+        this.width = $('.carousel_wrap .banner li').width()
+        this.swiperContainer = $('.carousel_wrap .banner').eq(caseIndex)
+        this.sliderLength = this.swiperContainer.find('li').length
+        this.swiperPage = $('.list li')
+        this.index = 0
+        this.autoTime = null;
+        var _this = this
+        this.switch()
+        this.auto()
+        $('.box .left').click(function(){
+            _this.left()
+        })
+        $('.box .right').click(function(){
+            _this.right()
+        })
+        $('.box').mouseover(function(){
+            clearInterval(_this.autoTime)
+        })
+        $('.box').mouseout(function(){
+            _this.auto()
+        })
+        
+    }
+    swiperCase.prototype.left = function(){
+        if(this.index == 0){
+          caseIndex--
+          if(caseIndex < 0){
+            this.caseIndex = this.swiperPage.length -1
+          }
+          this.switch()
         }
-
+        if(this.index > 0){
+          this.index--
+          this.swiperContainer.css('transform' , 'translate3d('+-this.index*this.width+'px, 0, 0)')
+        } 
     }
-    Right.onclick = function () {
-        auto();
-    }
-
-    Left.onclick = function () {
-        if (onOff) {
-            onOff = false;
-            clearInterval(timer);
-            // listLi[index].setAttribute('class', '');
-            index--;
-            listIndex--;
-            if (index < 0) {
-                index = oLi.length - 1;
-            }
-            // listLi[index].setAttribute('class', 'active');
-            if (listIndex === 0) {
-                setTimeout(function () {
-                    listIndex = 91;
-                    banner.style.transition = 'none';
-                    banner.style.left = -(listIndex) * oneSize + 'px';
-                    console.log(listIndex);
-                    // console.log(child.length);
-                }, 500)
-            }
-            banner.style.transition = '0.5s';
-            banner.style.left = -(listIndex) * oneSize + 'px';
-            console.log(listIndex);
-
-            setTimeout(function () {
-                onOff = true;
-            }, 500)
+    swiperCase.prototype.right = function(){
+        if(this.index == this.sliderLength - 1 ){
+          this.index = 0
+          caseIndex++
+          if(caseIndex > this.swiperPage.length -1){
+            caseIndex = 0 
+          }
+          this.switch()
         }
+        if(this.index < this.sliderLength - 1){
+          this.index++
+          this.swiperContainer.css('transform','translate3d('+-this.index*this.width+'px, 0, 0)')
+        }
+    }
+    swiperCase.prototype.switch = function(){
+        this.swiperContainer = $('.carousel_wrap .banner').eq(caseIndex)
+        this.swiperPage.eq(caseIndex).addClass('active').siblings().removeClass('active')
+        $('.carousel_wrap .banner').eq(caseIndex).show().siblings().hide()
+    }
+    swiperCase.prototype.auto = function(){
+        var _this = this
+        this.autoTime = setInterval(function(){
+          _this.right()
+        },3000)
+    }
 
-    }
-    box.onmouseenter = function () {
-        clearInterval(timer);
-    }
-    box.onmouseleave = function () {
-        timer = setInterval(function () {
-            auto();
-        }, 2000)
-    }
-
+    var swiper = new swiperCase()
 </script>
 </script>
