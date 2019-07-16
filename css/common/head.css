@@ -1,0 +1,130 @@
+/*进度条*/
+#progress {
+    position:fixed;
+    top: 0;
+    height: 6px;
+    background:linear-gradient(135deg,rgba(250,217,97,1) 0%,rgba(247,148,28,1) 100%);
+    transition:opacity 500ms linear;
+    z-index: 999;
+}
+#progress.done {
+    opacity:0
+}
+#progress span {
+    position:absolute;
+    height:2px;
+    -webkit-box-shadow:#b91f1f 1px 0 6px 1px;
+    -webkit-border-radius:100%;
+    opacity:1;
+    width:150px;
+    right:-10px;
+    -webkit-animation:pulse 2s ease-out 0s infinite;
+}
+
+@-webkit-keyframes pulse {
+    30% {
+        opacity:.6
+    }
+    60% {
+        opacity:0;
+    }
+    100% {
+        opacity:.6
+    }
+}
+@media screen and (min-width: 769px) {
+    header{
+        width: 100%;
+        height: 53px;
+        line-height: 53px;
+        background: #33496A;
+        position: absolute;
+        top: 0px;
+        z-index: 99;
+    }
+    .index_header{
+        background:linear-gradient(180deg,rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
+    }
+    .top_bar{
+        width: 1200px;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .top_bar_left{
+        display: flex;
+        justify-content: space-between;
+        flex: 1;
+    }
+    .top_bar_left img{
+        height: 23px;
+        margin-top: 14px;
+    }
+    .top_bar_left span{
+        font-size: 12px;
+        color: #fff;
+        font-family:SourceHanSansCN-Normal;
+        font-weight: 200;
+        margin-right:57px;
+    }
+    .top_bar_right{
+        display: flex;
+    }
+    .top_bar_right li{
+        width: 70px;
+        margin-left: 30px;
+        text-align: center;
+    }
+    .top_bar_right li a{
+        font-size: 12px;
+        color: #fff;
+        font-weight: 200;
+        font-family:SourceHanSansCN-Normal;
+    }
+    .top_bar_right li a:hover{
+        color: #FFB400;
+        font-weight: 800;
+    }
+    .top_bar_right li a.act{
+        color: #FFB400;
+        font-weight: 800;
+    }
+    .icondianhua{
+        color: #fff;
+        position: relative;
+        top: 1.4px;
+    }
+    .headerh5{
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    html{
+        /* font-size: 625%; */
+        font-size: calc( 100vw / 750 * 200 );
+    }
+    #progress,header{
+        display: none;
+    }
+    .headerh5{
+        width: 100vw;
+        height: 0.44rem;
+        background: #33496A;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 0.2rem;
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99999;
+    }
+    .indexh5_logo{
+        width: 1.1rem;
+    }
+    .iconkediankai{
+        color: #fff;
+    }
+}

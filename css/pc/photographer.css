@@ -1,0 +1,312 @@
+@media screen and (min-width: 769px) {
+    .bePhotoerImg{
+        width: 100%;
+        height: 731px;
+        min-width: 1366px;
+        background: url(../../img/pc/photographer/banner.png)no-repeat;
+        background-size: 1920px 731px;
+        background-position: center;
+        margin-top: 53px;
+    }
+    .bePhotoerImg_center{
+        width: 1200px;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .bePhotoer_cover{
+        width: 837px;
+        height: 172px;
+        background:rgba(0,0,0,0.6978);
+        padding: 35px 50px;
+        box-sizing: border-box;
+        position: relative;
+        top: -73px;
+    }
+    .bePhotoer_cover h1{
+        font-size:36px;
+        font-family:SourceHanSansCN-Heavy;
+        font-weight:800;
+        color:rgba(255,255,255,1);
+        line-height:42px;
+    }
+    .bePhotoer_cover p{
+        font-size:25px;
+        font-family:SourceHanSansCN-Normal;
+        font-weight:400;
+        color:rgba(255,255,255,1);
+        line-height:42px;
+    }
+    .forword_join{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .joinBtn{
+        width: 89px;
+        height: 24px;
+        background: rgba(255,180,0,1);
+        border-radius: 18px;
+        font-size: 12px;
+        padding: 0 4px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        box-sizing: border-box;
+    }
+    .btn-group{
+        position: absolute;
+        right: -60px;
+        top: 338px;
+    }
+    .btn-group .order{
+        width:32px;
+        height:94px;
+        background:rgba(255,180,0,1);
+        border-radius:16px;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        line-height: 13px;
+        text-align: center;
+        padding: 10px 11px;
+        box-sizing: border-box;
+    }
+    .btn-group .service{
+        width:32px;
+        height:63px;
+        background:rgba(255,180,0,1);
+        border-radius:16px;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        line-height: 13px;
+        text-align: center;
+        padding: 10px 11px;
+        box-sizing: border-box;
+        margin-top: 20px;
+    }
+    .iconyuyuepaishe,.iconkefu{
+        font-size: 13px !important;
+    }
+    /*成为摄影师*/
+    .become{
+        width: 1200px;
+        height: 520px;
+        margin: 73px auto;
+    }
+    .become h1{
+        font-size:32px;
+        font-family:SourceHanSansCN-Normal;
+        font-weight:400;
+        color:rgba(0,0,0,1);
+        line-height:54px;
+        text-align: center;
+    }
+    .become .down_be{
+        width: 229px;
+        margin: -27px auto 0;
+    }
+    .become ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 50px;
+    }
+    .become ul li{
+        width:360px;
+        height:340px;
+        background:rgba(255,255,255,1);
+        box-shadow:5px 10px 30px 0px rgba(221,234,255,1);
+        border-radius:10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .become ul li img{
+        margin-bottom: 17px;
+    }
+    .become ul li small{
+        text-align: center;
+        font-size:20px;
+        font-family:SourceHanSansCN-Normal;
+        font-weight:400;
+        color:rgba(74,74,74,1);
+        line-height:30px;
+    }
+    /*签约流程*/
+    .sign_contract{
+        width: 100%;
+        height: 830px;
+        min-width: 1366px;
+        background: url(../../img/pc/photographer/bitmap.png) no-repeat;
+        background-size: 1920px 498px;
+        background-position: center;
+        margin-bottom: 60px;
+    }
+    .sign_contract_center{
+        width: 1090px;
+        height: 830px;
+        margin: 0 auto;
+    }
+    .sign_contract_center h1{
+        font-size: 32px;
+        font-family: SourceHanSansCN-Normal;
+        font-weight: 400;
+        color: rgba(0,0,0,1);
+        line-height: 54px;
+        text-align: center;
+    }
+    .sign_contract_center .down_write{
+        width: 244px;
+        margin: -27px auto 0;
+    }
+    .what{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 1000px;
+        margin: 20px auto 0;
+    }
+    .what li{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .what li img{
+        height: 42px;
+    }
+    .what li p{
+        font-size:22px;
+        font-family:SourceHanSansCN-Heavy;
+        font-weight:800;
+        color:rgba(74,104,154,1);
+        line-height:36px;
+        margin: 10px 0;
+    }
+    .what li small{
+        font-size:12px;
+        font-family:SourceHanSansCN-Normal;
+        font-weight:400;
+        color:rgba(74,104,154,1);
+        line-height:14px;
+    }
+    .liu{
+        margin-top: 143px;
+    }
+    .down_server{
+        width: 136px;
+        margin: -27px auto 0;
+    }
+    /*服务流程*/
+    .count{
+        width: 970px;
+        display: flex;
+        justify-content: space-between;
+        margin: 90px auto 0; 
+    }
+    .count li{
+        font-size: 60px;
+        font-weight: bold;
+        color: #4A689A;
+        font-family:DINCondensed-Bold;
+    }
+    .line{
+        width: 940px;
+        height: 2px;
+        border-bottom: 2px dashed #4A689A;
+        margin: 0 auto;
+    }
+    .cir{
+        width: 970px;
+        height:24px;
+        display: flex;
+        justify-content: space-between;
+        margin: -11px auto 0;
+    }
+    .cir li{
+        width: 20px;
+        height: 20px;
+        border: 1px solid #4A689A;
+        border-radius: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .cir li span{
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        background:  #4A689A;
+        border-radius: 50%;
+    }
+    .text{
+        display: flex;
+        justify-content: space-between;
+        font-size:24px;
+        font-family:SourceHanSansCN-Normal;
+        font-weight:400;
+        color:rgba(74,104,154,1);
+        line-height:25px;
+        margin: 20px auto 0;
+    }
+    .text li{
+        width: 160px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /*加入我们*/
+    .joinUs{
+        width: 100%;
+        min-width: 1366px;
+        height: 250px;
+        background: url(../../img/pc/photographer/bejoin.png)no-repeat;
+        background-size: 1920px 250px;
+        background-position: center;
+    }
+    .joinUs_dic{
+        width: 1200px;
+        height: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    .joinUs_dic h2{
+        font-size:24px;
+        font-family:SourceHanSansCN-Heavy;
+        font-weight:800;
+        color:rgba(255,255,255,1);
+        line-height:36px;
+        letter-spacing:3px;
+        text-shadow:0px 0px 4px rgba(0,0,0,0.5);
+        text-align: center;
+        margin-top: 50px;
+    }
+    .joinUs_dic p{
+        font-size:18px;
+        font-family:SourceHanSansCN-Normal;
+        font-weight:400;
+        color:rgba(255,255,255,1);
+        line-height:27px;
+        letter-spacing:4px;
+        text-shadow:0px 0px 4px rgba(0,0,0,0.5);
+        text-align: center;
+        margin: 0;
+    }
+    .joinUs_dic div{
+        width:199px;
+        height:40px;
+        background:linear-gradient(135deg,rgba(254,233,0,1) 0%,rgba(255,177,0,1) 100%);
+        border-radius:22px;
+        line-height: 40px;
+        font-size: 14px;
+        text-align: center;
+        margin: 40px auto 0;
+    }
+}

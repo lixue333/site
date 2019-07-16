@@ -1,0 +1,188 @@
+.shoot_bg{
+    width: 100%;
+    height: 970px;
+    min-width: 1366px;
+    background: url(../../img/pc/priorityShoot/ybg.png) no-repeat;
+    background-size: 1920px 970px;
+    background-position: center;
+    overflow: hidden;
+    margin-top: 53px;
+}
+.center_box{
+    width: 780px;
+    height: 100%;
+    margin: 0 auto;
+}
+.shoot_bg .shoot_logo{
+    width: 251px;
+    margin: 108px auto 0;
+}
+.center_box h1{
+    font-size:16px;
+    font-family:SourceHanSansCN-Heavy;
+    font-weight:800;
+    color:rgba(74,104,154,1);
+    line-height:24px;
+    letter-spacing:1px;
+    text-shadow:3px 3px 8px rgba(255,255,255,1);
+    text-align: center;
+}
+/*预约拍摄*/
+.make_appointment{
+    width:780px;
+    height:478px;
+    background:rgba(255,255,255,1);
+    box-shadow:5px 6px 30px 0px rgba(221,234,255,1);
+    border-radius:10px;
+    margin: 34px auto 0;
+    padding: 50px 120px 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.make_appointment .from_group{
+    display: flex;
+    flex-direction: column;
+}
+.make_appointment .from_group input{
+    border: none;
+    outline: none;
+    height: 30px;
+    background: rgba(0, 0, 0, 0)
+}
+.make_appointment .from_group label{
+    font-size:16px;
+    font-family:SourceHanSansCN-Heavy;
+    font-weight:800;
+    color:rgba(74,104,154,1);
+    
+}
+.make_appointment .from_group{
+    width: 100%;
+    border-bottom: 1px solid #F0F0F0;
+    padding-left: 20px;
+    padding-bottom: 4px;
+    padding-top: 5px;
+    box-sizing: border-box;
+}
+.make_appointment .from_group:nth-last-of-type(1){
+    border:none;
+}
+.make_appointment .sp{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.make_appointment .from_group input::-webkit-input-placeholder {
+    color: #9B9B9B;
+    font-size: 14px;
+}
+.make_appointment .getCode{
+    width:70px;
+    height:14px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Heavy;
+    font-weight:800;
+    color:rgba(74,104,154,1);
+    line-height:21px;
+}
+.appointmentBtn{
+    width:230px;
+    height:38px;
+    background:linear-gradient(135deg,rgba(97,131,174,1) 0%,rgba(56,87,140,1) 100%);
+    border-radius:20px;
+    margin: 12px auto 0;
+    text-align: center;
+    line-height: 38px;
+    color: #fff;
+    font-size: 14px;
+}
+.appointmentBtn:hover,.make_appointment .getCode:hover{
+    cursor: pointer;
+}
+/*预约成功*/
+.appointment_succee{
+    width:780px;
+    height:478px;
+    background:rgba(255,255,255,1);
+    box-shadow:5px 6px 30px 0px rgba(221,234,255,1);
+    border-radius:10px;
+    margin: 34px auto 0;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+.close .close_img{
+    width: 26px;
+    float:right;
+}
+.succes_img{
+    width: 48px;
+    margin: 46px auto 22px;
+}
+.appointment_succee p{
+    font-size:20px;
+    font-family:SourceHanSansCN-Normal;
+    font-weight:400;
+    color:rgba(0,0,0,1);
+    line-height:30px;
+    letter-spacing:1px;
+    text-align: center;
+    margin: 0;
+}
+.appointment_succee h3{
+    font-size:14px;
+    font-family:SourceHanSansCN-Heavy;
+    font-weight:900;
+    color:rgba(0,0,0,1);
+    line-height:21px;
+    text-align: center;
+}
+.appointment_succee h3:nth-of-type(1){
+    margin-top: 53px;
+}
+.appointment_succee h3:nth-of-type(2){
+    margin-top: 21px;
+}
+.appointment_succee h4{
+    font-size:14px;
+    font-family:SourceHanSansCN-Heavy;
+    font-weight:normal;
+    color:rgba(0,0,0,1);
+    line-height:21px;
+    text-align: center;
+}
+.code{
+    width: 80px;
+    margin: 0 auto;
+}
+/*弹窗*/
+.dialog{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background:rgba(0,0,0,0.6); 
+}
+.dialog .center_box .make_appointment{
+    height: 570px;
+}
+.dialog .center_box .make_appointment h1{
+    margin-bottom: 20px;
+}
+.dialog .center_box{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -390px;
+    margin-top: -285px;
+}
+.dialog .close{
+    position: absolute;
+    right: 30px;
+    top: 53px;
+}

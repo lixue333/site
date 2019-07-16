@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{margin:0;padding:0;}
+        ul{padding:0;list-style: none;}
+        .box{
+            width: 500px;
+            height: 280px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .banner{
+            width: 520px;
+            height: 280px;
+            background: green;
+            margin: 0 auto;
+            position: absolute;
+        }
+        .banner li{
+            width: 520px;
+            height: 280px;
+            float:left;
+        }
+        .banner li img{
+            display: block;
+            width: 520px;
+            height: 280px;
+            float:left;
+        }
+        .list{
+            position: absolute;
+            width: 100px;
+            bottom: 10px;
+            left: 220px;
+        }
+        .list li{
+            width: 10px;
+            margin-left: 5px;
+            border-radius: 50%;
+            height: 10px;
+            background: #fff;
+            opacity: 0.6;
+            float:left;
+        }
+        .list li.active{
+            background: #ff5000;
+            opacity: 1;
+        }
+        span{
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            opacity: 0.6;
+            position: absolute;
+            top: 50%;
+            line-height: 20px;
+            text-align: center;
+        }
+        .left{
+            left: 0px;
+            border-radius: 0 20px 20px 0px;
+        }
+        .right{
+            right: 0px;
+            border-radius: 20px 0px 0px 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul class='banner'>
+            <li>1<img src='img/TB1OKw4ymzqK1RjSZPcXXbTepXa-520-280.jpg_q90.jpg'></li>
+            <li>2<img src='img/TB1LYDUmXkoBKNjSZFkSuv4tFXa.jpg'></li>
+            <li>3<img src='img/TB1uagfo7zoK1RjSZFlSuui4VXa.jpg'></li>
+            <li>4<img src='img/TB1u8FHy9zqK1RjSZFLXXcn2XXa-520-280.jpg_q90.jpg'></li>
+        </ul>
+        <ul class='list'>
+            <li class='active'></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <span class='left'><</span>
+        <span class='right'>></span>
+    </div>
+    <script>
+        window.onload=function(){
+            var onOff=true;
+            var box=document.querySelector('.box');
+            var banner=document.querySelector('.banner');
+            var oLi=banner.querySelectorAll('li');
+            var list=document.querySelector('.list');
+            var listLi=list.querySelectorAll('li');
+            var Left=document.querySelector('.left');
+            var Right=document.querySelector('.right');
+            var oneSize=oLi[0].offsetWidth;
+            console.log(oneSize);
+            var children=banner.children;
+            var child=list.children;
+            var lastChild=children[children.length-1];
+            var firstChild=children[0];
+            banner.appendChild(firstChild.cloneNode(true));
+            banner.insertBefore(lastChild.cloneNode(true),firstChild);
+            console.log(lastChild);
+            banner.style.width=children.length*oneSize+'px';
+            banner.style.left='-'+oneSize+'px';
+            var timer=null;
+            var index=0;
+            var listIndex=1;
+            timer=setInterval(function(){
+               auto();
+            },2000)
+            for(var i=0;i<child.length;i++){
+                listLi[i].index=i;
+                listLi[i].onclick=function(){
+                    clearInterval(timer);
+                    console.log(this.index);
+                    listLi[index].setAttribute('class','');
+                    this.setAttribute('class','active');
+                    index=this.index;
+                    banner.style.transition='0.5s';
+                    banner.style.left=-(index+1)*oneSize+'px';
+                }
+            }
+            function auto(){
+                if(onOff){
+                    onOff=false;
+                    listLi[index].setAttribute('class','');
+                    index++;
+                    listIndex++;
+                    index%=child.length;
+                    listLi[index].setAttribute('class','active');
+                    banner.style.transition='0.5s';
+                    console.log(listIndex);
+                    banner.style.left=-(listIndex)*oneSize+'px';
+                    if(listIndex==children.length-1){
+                        onOff=false;
+                        setTimeout(function(){
+                            banner.style.transition='none';
+                            listIndex=1;
+                            banner.style.left=-(listIndex)*oneSize+'px';
+                        },500)
+                    }
+                    setTimeout(function(){
+                         onOff=true;
+                    },500)
+                    
+                }
+                
+            }
+            Right.onclick=function(){
+                auto();
+            }
+            
+            Left.onclick=function(){
+                if(onOff){
+                    onOff=false;
+                    clearInterval(timer);
+                    listLi[index].setAttribute('class','');
+                    index--;
+                    listIndex--;
+                    if(index<0){
+                        index=child.length-1;
+                    }
+                    listLi[index].setAttribute('class','active');
+                    banner.style.transition='0.5s';
+                    banner.style.left=-(listIndex)*oneSize+'px';
+                    console.log(listIndex);
+                    if(listIndex===0){
+                        setTimeout(function(){
+                            listIndex=child.length;
+                            banner.style.transition='none';
+                            banner.style.left=-(listIndex)*oneSize+'px';
+                            console.log(child.length);
+                        },500)
+                    }
+                    setTimeout(function(){
+                         onOff=true;
+                    },500)
+                }
+                
+            }
+            box.onmouseenter=function(){
+                clearInterval(timer);
+            }
+            box.onmouseleave=function(){
+                timer=setInterval(function(){
+                    auto();
+                },2000)
+            }
+        }
+    </script>
+    
+</body>
+</html>

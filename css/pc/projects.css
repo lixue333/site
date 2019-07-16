@@ -1,0 +1,182 @@
+@media screen and (min-width: 769px) {
+    .case_bg{
+        width: 100%;
+        min-width: 1366px;
+        height: 90px;
+        background: url(../../img/pc/projects/casebg.png)no-repeat;
+        background-size: 1920px 90px;
+        background-position: center;
+        overflow: hidden;
+        margin-top: 53px;
+    }
+    .case_title{
+        width: 300px;
+        margin: 30px auto 0;
+    }
+    /*导航条*/
+    .nav_bar{
+        width: 100%;
+        height: 40px;
+        background: #000;
+        min-width: 1366px;
+    }
+    .nav_bar ul{
+        width: 1200px;
+        line-height: 40px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav_bar ul li a{
+        font-size:14px;
+        font-family:SourceHanSansCN-Normal;
+        font-weight:400;
+        color:rgba(255,255,255,1);
+        line-height:24px;
+    }
+    .nav_bar ul li .act{
+        color:#FFB400;
+    }
+    /*案例*/
+    .news_page{
+        width:1200px;
+        margin: 0 auto 30px;
+        padding: 30px;
+        padding-bottom: 0;
+        box-sizing: border-box;
+        position: relative;
+    }
+    .news_page ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .news_page ul li{
+        width:360px;
+        height:340px;
+        background:rgba(255,255,255,1);
+        box-shadow:5px 10px 30px 0px rgba(221,234,255,1);
+        border-radius:16px;
+        margin-bottom: 40px;
+        position: relative;
+    }
+    .covercode{
+        width:360px;
+        height:340px;
+        border-radius:16px;
+        background: rgba(0,0,0,0.6983);
+        position: absolute;
+        top: 0;
+        left:0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .code{
+        width: 90px;
+        height: 90px;
+        margin: 40px auto 15px;
+    }
+    .covercode small{
+        color: #fff;
+        font-size:18px;
+        font-family:SourceHanSansCN-Normal;
+        font-weight:400;
+        line-height: 26px;
+    }
+    .code img{
+        width: 90px !important; 
+        height: 90px !important;
+        border-radius: 0 0 0 0 !important;
+    }
+    .small_box{
+        display: flex;
+        flex-direction: column;
+    }
+    .news_page ul li img{
+        width: 360px;
+        height: 204px;
+        border-radius: 16px 16px 0 0;
+    }
+    .news_page ul li h2{
+        font-size:20px;
+        font-family:SourceHanSansCN-Heavy;
+        font-weight:800;
+        color:rgba(0,0,0,1);
+        line-height:24px;
+        padding: 0 14px;
+        box-sizing: border-box;
+        margin: 14px 0 10px;
+    }
+    .news_page ul li p{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+    }
+    .news_page ul li p span{
+        display: flex;
+        flex-direction: column;
+        padding: 0 14px;
+        box-sizing: border-box;
+        font-size:14px;
+        font-family:SourceHanSansCN-Normal;
+        font-weight:400;
+        color:rgba(155,155,155,1);
+        line-height:21px;
+    }
+    .goOn{
+        color: #D8D8D8;
+        margin-right: 20px;
+        font-size: 34px !important;
+    }
+    .goOn:hover{
+        color: #FFB400;
+    }
+    .btn-group{
+        position: absolute;
+        right: -40px;
+        top: 88px;
+    }
+    .btn-group .order{
+        width:32px;
+        height:94px;
+        background:rgba(255,180,0,1);
+        border-radius:16px;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        line-height: 13px;
+        text-align: center;
+        padding: 10px 11px;
+        box-sizing: border-box;
+    }
+    .btn-group .service{
+        width:32px;
+        height:63px;
+        background:rgba(255,180,0,1);
+        border-radius:16px;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        line-height: 13px;
+        text-align: center;
+        padding: 10px 11px;
+        box-sizing: border-box;
+        margin-top: 20px;
+    }
+    .iconyuyuepaishe,.iconkefu{
+        font-size: 13px !important;
+    }
+    .iconyuyuepaishe,.iconkefu{
+        font-size: 13px !important;
+    }
+    .none{
+        display: none;
+    }
+}
