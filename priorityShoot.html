@@ -60,33 +60,33 @@
     </header>
     <!--背景-->
     <div class="shoot_bg">
-        <div class="center_box">
+        <div class="center_box" id="order">
             <img class="shoot_logo" src="./img/pc/priorityShoot/ylogo.png" />
             <h1>活动云拍摄全案专家</h1>
             <!--立即预约-->
             <div class="make_appointment">
                 <div class="from_group">
                     <label>如何称呼您</label>
-                    <input type="text" placeholder="请在这里输入">
+                    <input type="text" name="name" placeholder="请输入姓名">
                 </div>
                 <div class="from_group">
                     <label>您的手机号码</label>
-                    <input type="text" placeholder="请在这里输入">
+                    <input type="text" name="phone" placeholder="请输入手机号">
                 </div>
                 <div class="from_group">
                     <label>验证码</label>
                     <div class="sp">
-                        <input type="text" placeholder="请在这里输入" />
-                        <a class="getCode">获取验证码</a>
+                        <input type="text" name="code" placeholder="请输入验证码" />
+                        <span  class="getCode">获取验证码</span>
                     </div>
                 </div>
                 <div class="from_group">
                     <label>拍摄城市</label>
-                    <input type="text" placeholder="请在这里输入您要拍摄的城市所在地，例如：广东深圳">
+                    <input type="text" placeholder="请输入您要拍摄的城市所在地，例如：广东深圳">
                 </div>
                 <div class="from_group">
                     <label>拍摄时间</label>
-                    <input type="text" placeholder="请在这里输入您想要拍摄的时间，例如：2019-01-01至03">
+                    <input type="text" placeholder="请输入您想要拍摄的时间，例如：2019-01-01至03">
                 </div>
                 <div class="from_group">
                     <div class="appointmentBtn">立即预约</div>
@@ -119,26 +119,26 @@
                 <h1>活动云拍摄全案专家</h1>
                 <div class="from_group">
                     <label>如何称呼您</label>
-                    <input type="text" placeholder="请在这里输入">
+                    <input type="text" name="name" placeholder="请输入姓名">
                 </div>
                 <div class="from_group">
                     <label>您的手机号码</label>
-                    <input type="text" placeholder="请在这里输入">
+                    <input type="text" name="phone" placeholder="请输入手机号">
                 </div>
                 <div class="from_group">
                     <label>验证码</label>
                     <div class="sp">
-                        <input type="text" placeholder="请在这里输入" />
+                        <input type="text" name="code" placeholder="请输入验证码" />
                         <a class="getCode">获取验证码</a>
                     </div>
                 </div>
                 <div class="from_group">
                     <label>拍摄城市</label>
-                    <input type="text" placeholder="请在这里输入您要拍摄的城市所在地，例如：广东深圳">
+                    <input type="text" name="address" placeholder="请输入您要拍摄的城市所在地，例如：广东深圳">
                 </div>
                 <div class="from_group">
                     <label>拍摄时间</label>
-                    <input type="text" placeholder="请在这里输入您想要拍摄的时间，例如：2019-01-01至03">
+                    <input type="text" name="time" placeholder="请输入您想要拍摄的时间，例如：2019-01-01至03">
                 </div>
                 <div class="from_group">
                     <div class="appointmentBtn">立即预约</div>
@@ -188,5 +188,16 @@
 </body>
 <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
 <script src="./js/common.js"></script>
-
+<script>
+$('.getCode').click(function(){
+    
+    if($(this).text() == '获取验证码'){
+        console.log($(this).text())
+        getcode('#order')
+    }
+})
+$('.appointmentBtn').click(function(){
+    validform('#order')
+})
+</script>
 </html>
