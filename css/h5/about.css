@@ -69,10 +69,10 @@
     }
     .btn-group{
         width: 0.3rem;
-        position: absolute;
+        position: fixed;
         right: 0.12rem;
         z-index: 99;
-        top: 3.2rem;
+        bottom: 0.6rem;
     }
     .btn-group .order{
         width:0.3rem;
@@ -87,6 +87,7 @@
         text-align: center;
         padding: 0.06rem 0.02rem;
         box-sizing: border-box;
+        color: #000;
     }
     .btn-group .service{
         width:0.3rem;
@@ -102,6 +103,7 @@
         padding: 0.06rem 0.02rem;
         box-sizing: border-box;
         margin-top: 0.24rem;
+        color: #000;
     }
     .iconyuyuepaishe,.iconkefu{
         font-size: 0.14rem !important;

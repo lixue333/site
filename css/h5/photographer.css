@@ -29,9 +29,10 @@
     }
     .btn-group{
         width: 0.3rem;
-        position: absolute;
+        position: fixed;
         right: 0.2rem;
-        top: 5rem;
+        bottom: 0.6rem;
+        z-index: 99;
     }
     .order{
         width: 0.3rem;
@@ -46,6 +47,7 @@
         text-align: center;
         padding: 0.06rem 0.02rem;
         box-sizing: border-box;
+        color: #000;
     }
     .service{
         width: 0.3rem;
@@ -61,6 +63,7 @@
         padding: 0.06rem 0.02rem;
         box-sizing: border-box;
         margin-top: 0.24rem;
+        color: #000;
     }
     .joinBtn{
         width: 1rem;
@@ -111,6 +114,13 @@
     .become ul li img{
         width: 100%;
         margin: 0 auto;
+    }
+    .become ul li div{
+        height: 0.54rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
     }
     .become ul li small{
         font-size:0.16rem;
@@ -302,5 +312,8 @@
     }
     footer{
         display: none;
+    }
+    .joinBtn:hover,.joinusbtn:hover{
+        cursor: pointer;
     }
 }

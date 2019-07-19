@@ -4,7 +4,7 @@
         min-width: 1366px;
         height: 90px;
         background: url(../../img/pc/projects/casebg.png)no-repeat;
-        background-size: 1920px 90px;
+        background-size:cover;
         background-position: center;
         overflow: hidden;
         margin-top: 53px;
@@ -64,8 +64,8 @@
     }
     .covercode{
         width:360px;
-        height:340px;
-        border-radius:16px;
+        height:204px;
+        border-radius:16px 16px 0 0;
         background: rgba(0,0,0,0.6983);
         position: absolute;
         top: 0;
@@ -78,7 +78,8 @@
     .code{
         width: 90px;
         height: 90px;
-        margin: 40px auto 15px;
+        margin: 26px auto 15px;
+        background: #fff;
     }
     .covercode small{
         color: #fff;
@@ -102,6 +103,7 @@
         border-radius: 16px 16px 0 0;
     }
     .news_page ul li h2{
+        height: 52px;
         font-size:20px;
         font-family:SourceHanSansCN-Heavy;
         font-weight:800;
@@ -137,9 +139,10 @@
         color: #FFB400;
     }
     .btn-group{
-        position: absolute;
-        right: -40px;
-        top: 88px;
+        position: fixed;
+        right: 90px;
+        top: 238px;
+        z-index: 10000;
     }
     .btn-group .order{
         width:32px;
@@ -154,6 +157,7 @@
         text-align: center;
         padding: 10px 11px;
         box-sizing: border-box;
+        color: #000;
     }
     .btn-group .service{
         width:32px;
@@ -169,6 +173,7 @@
         padding: 10px 11px;
         box-sizing: border-box;
         margin-top: 20px;
+        color: #000;
     }
     .iconyuyuepaishe,.iconkefu{
         font-size: 13px !important;
@@ -178,5 +183,10 @@
     }
     .none{
         display: none;
+    }
+    #newBridge .icon-right-bottom ,.nb-icon-inner-wrap{
+        right: 30px !important;
+        top:175px !important;
+        background: rgba(0, 0, 0, 0) !important ;
     }
 }

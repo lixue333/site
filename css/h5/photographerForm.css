@@ -1,0 +1,191 @@
+@media screen and (max-width: 769px) {
+    .wrap{
+        position: relative;
+    }
+    .wrap .make_appointment{
+        position: static !important;
+    }
+    .center_box{
+        width: 100vw;
+        background: #fff;
+        height: auto !important;
+        overflow: hidden;
+        position: fixed;
+        bottom: 0;
+    }
+    .shoot_logo{
+        margin: 0.2rem auto 0;
+    }
+    .close{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+       
+    }
+    .sc ul{
+        height: 0.3rem;
+        display: flex !important;
+        flex-wrap: wrap !important;
+    }
+    
+    .make_appointment ul:nth-of-type(1) {
+        justify-content: space-between;
+        overflow: hidden;
+    }
+    .make_appointment{
+        height: 4.8rem;
+    }
+    .make_appointment ul:nth-of-type(2) li {
+        margin-right: 0.06rem;
+    }
+    .make_appointment ul li{
+        height: 0.24rem;
+        line-height: 0.3rem;
+        display: flex;
+    }
+    .make_appointment ul li a {
+        height: 0.3rem;
+        color: #9B9B9B;
+        font-size: 0.12rem;
+    }
+    .checked{
+        margin: 0.03rem 0 0 0;
+    }
+    .sc label{
+        margin-bottom: 0.03rem;
+    }
+    .checked li{
+        width: 0.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background: #fff;
+        border-radius: 0.2rem;
+    }
+    .checked li.act{
+        width: 0.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background: #4A689A;
+        border-radius: 0.2rem;
+    }
+    .checked li a.act{
+        color: #fff !important;
+    }
+}
+
+.coverdialog{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.5);
+    z-index: 999;
+}
+.make_appointment{
+    box-shadow: none ;
+    margin: 0 !important;
+
+}
+@media screen and (min-width: 769px) {
+    .wrap{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -390px;
+        margin-top: -315px;
+    }
+    .coverdialog{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0,.7);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 999;
+    }
+    .make_appointment{
+        padding-top: 20px;
+    }
+    .center_box{
+        width: 780px;
+        background: #fff;
+        height: auto !important;
+        box-shadow: 5px 6px 30px 0px rgba(221,234,255,1);
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+    }
+    .close{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+       
+    }
+    .shoot_logo{
+        margin: 30px auto 0;
+    }
+    .make_appointment {
+        height: 517px;
+    }
+
+    .appointment_succee {
+        height: 527px;
+    }
+
+    .make_appointment ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .make_appointment ul:nth-of-type(1) {
+        justify-content: space-between;
+    }
+
+    .make_appointment ul:nth-of-type(2) li {
+       margin-right: 8px;
+    }
+
+    .make_appointment ul li a {
+        color: #9B9B9B;
+        font-size: 13px;
+    }
+
+    .none {
+        display: none;
+    }
+
+    .appointment_succee p {
+        font-size: 18px;
+    }
+    .checked{
+       margin: 8px 0;
+    }
+    .checked li{
+        background: #fff;
+        border-radius:12px;
+        padding: 0.2rem 0.45rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .checked li.act{
+        background: #4A689A;
+        border-radius:12px;
+        padding: 0.2rem 0.45rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .checked li a.act{
+        color: #fff !important;
+    }
+    .checked li a:hover{
+        cursor: pointer;
+    }
+}

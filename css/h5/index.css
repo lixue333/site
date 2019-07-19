@@ -2,7 +2,7 @@
     .banner_box{
         width: 100vw;
         height: 2rem;
-        background: url(../../img/h5/index/headerbg.png);
+        /* background: url(../../img/h5/index/headerbg.png); */
         background-size: 100% 100%;
         position: relative;
         min-width: 0;
@@ -15,6 +15,11 @@
         margin-right: auto;
         overflow: hidden;
     
+    }
+    .img{
+        height:2rem;
+        background-size: cover;
+        background-position: center;
     }
     .banner_box .swiper-wrapper{
         width: 100%;
@@ -31,29 +36,23 @@
        display: none;
     }
     /*头图文字*/
-    .pushi_center_box .pushi_title h1{
-        font-size: 0.12rem;
-        font-family:SourceHanSansCN-Normal;
-        font-weight:400;
-        line-height: 0.12rem;
-        color: #fff;
+    .pushi_title h1{
         position: absolute;
-        left: 0.26rem;
-        top: 1.5rem;
-    }
-    .pushi_center_box{
-        width: 100vw;
-        height: 2rem;
-        position: relative;
-    }
-    .pushi_title{
-        position: static;
+        bottom:0.2rem;
+        left: 0.1rem;
+        font-size: 0.14rem;
+        color: #fff;    
     }
     .major{
-        width: auto;
+        position: absolute;
+        bottom:0.2rem;
+        right: 0.1rem;
+        
     }
     .major h2{
         display: none;
+        font-size: 0.12rem;
+        color: #Fff;
     }
     .know_pushi{
         width:1rem;
@@ -69,9 +68,7 @@
         align-items: center;
         padding: 0 0.1rem;
         box-sizing: border-box;
-        position: absolute;
-        right: 0.26rem;
-        top: 1.5rem;
+        margin-right: 0.1rem;
     }
     .iconxiangyou{
         font-size: 0.16rem !important;
@@ -212,11 +209,17 @@
         text-align: center;
         margin-top: -0.4rem;
     }
-    .case_carousel {
+    .carousel_wrap{
+        position: absolute;
+        left:0;
+        overflow: hidden;
+        display: flex;
+    }
+    .case_carousel{
         overflow: hidden;
     }
     .case_carousel .banner{
-
+        transition: all .5s;
         display: flex;
     }
     .case_carousel .banner li{
@@ -228,8 +231,62 @@
         height: 3rem;
     }
     .banner li img{
+        width: 100%;
         margin:0 !important;
     }
+    
+    
+   
+    .left,.right{
+        width:0.3rem;
+        height:0.3rem;
+        background:rgba(255,180,0,1);
+        border-radius: 50%;
+        position: absolute;
+        top: 1.3rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: #FFF !important;
+    }
+    .left{
+        left: 0.1rem;
+    }
+    .right{
+        right: 0.1rem;
+    }
+    .case_carousel .list{
+        width: 100vw;
+        height:0.3rem;
+        background: #000;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;  
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .case_carousel .list li a{
+        width: 0.8rem;
+        height: 0.3rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .case_carousel .list a{
+        font-size: 0.13rem;
+        color: #fff;
+        font-family:SourceHanSansCN-Heavy;
+        font-weight:400;
+    }
+    .case_carousel .active a{
+        color: #FFB400;
+        font-family:SourceHanSansCN-Heavy;
+        font-weight:800;
+    }
+   
+
     /*企业新闻*/
     .news{
         width: 100vw;
@@ -241,7 +298,7 @@
     }
     .coverbg{
         width: 3rem;
-        height: 3.1rem;
+        height:1.67rem;
         border-radius: 0.1rem;  
         position:absolute;
         top:0;
@@ -280,6 +337,7 @@
         height: 3.4rem;
         display: flex;
         overflow: auto;
+        -webkit-overflow-scrolling: touch;
         padding-left: 0.2rem;
         box-sizing: border-box;
         margin-top: 0.45rem;
@@ -492,7 +550,7 @@
         display: flex;
         justify-content: space-between;
     }
-    .make_appointment{
+    .make_appointments{
         width: 100%;
         height: 100%;
     }
@@ -553,9 +611,9 @@
         line-height: 0.3rem;
         margin: 0.14rem auto 0;
     }
-    .make_appointment .from_group input::-webkit-input-placeholder {
+    /* .make_appointment .from_group input::-webkit-input-placeholder {
         color: #9B9B9B;
-    }
+    } */
     .bottom_list{
         display: none;
     }
@@ -564,11 +622,13 @@
         display: none;
     }
     .btn-group{
+        display: block !important;
         width: 0.3rem;
-        position: absolute;
+        position: fixed;
         right: 0.12rem;
         z-index: 99;
-        top: 5.5rem;
+        bottom: 0.6rem;
+        z-index: 100000;
     }
     .btn-group .order{
         width:0.3rem;
@@ -583,6 +643,7 @@
         text-align: center;
         padding: 0.06rem 0.02rem;
         box-sizing: border-box;
+        color: #000;
     }
     .btn-group .service{
         width:0.3rem;
@@ -598,6 +659,7 @@
         padding: 0.06rem 0.02rem;
         box-sizing: border-box;
         margin-top: 0.24rem;
+        color: #000;
     }
     .iconyuyuepaishe,.iconkefu{
         font-size: 0.14rem !important;
@@ -661,5 +723,60 @@
         color:rgba(5,5,5,1);
         line-height:0.18rem;
         text-align: center;
+    }
+    /*预约成功*/
+    .appointment_succee{
+        width:100vw;
+        height:4.23rem;
+        background:rgba(255,255,255,1);
+        padding: 0.2rem;
+        box-sizing: border-box;
+        position: fixed;
+        bottom: 0;
+        z-index:9999999;
+    }
+    .close .close_img{
+        width: 0.26rem;
+        float:right;
+    }
+    .succes_img{
+        width: 0.48rem;
+        margin: 0.46rem auto 0.22rem;
+    }
+    .appointment_succee p{
+        font-size:0.18rem;
+        font-family:SourceHanSansCN-Normal;
+        font-weight:400;
+        color:rgba(0,0,0,1);
+        line-height:0.25rem;
+        letter-spacing:1px;
+        text-align: center;
+        margin: 0;
+    }
+    .appointment_succee h3{
+        font-size:0.14rem;
+        font-family:SourceHanSansCN-Heavy;
+        font-weight:900;
+        color:rgba(0,0,0,1);
+        line-height:0.21rem;
+        text-align: center;
+    }
+    .appointment_succee h3:nth-of-type(1){
+        margin-top: 0.33rem;
+    }
+    .appointment_succee h3:nth-of-type(2){
+        margin-top: 0.18rem;
+    }
+    .appointment_succee h4{
+        font-size:0.14rem;
+        font-family:SourceHanSansCN-Heavy;
+        font-weight:normal;
+        color:rgba(0,0,0,1);
+        line-height:0.21rem;
+        text-align: center;
+    }
+    .code{
+        width: 0.8rem;
+        margin: 0 auto;
     }
 }

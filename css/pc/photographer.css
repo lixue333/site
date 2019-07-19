@@ -4,7 +4,7 @@
         height: 731px;
         min-width: 1366px;
         background: url(../../img/pc/photographer/banner.png)no-repeat;
-        background-size: 1920px 731px;
+        background-size:cover;
         background-position: center;
         margin-top: 53px;
     }
@@ -58,9 +58,10 @@
         box-sizing: border-box;
     }
     .btn-group{
-        position: absolute;
-        right: -60px;
-        top: 338px;
+        position: fixed;
+        z-index: 999;
+        right: 90px;
+        top: 308px;
     }
     .btn-group .order{
         width:32px;
@@ -75,6 +76,7 @@
         text-align: center;
         padding: 10px 11px;
         box-sizing: border-box;
+        color: #000;
     }
     .btn-group .service{
         width:32px;
@@ -90,6 +92,7 @@
         padding: 10px 11px;
         box-sizing: border-box;
         margin-top: 20px;
+        color: #000;
     }
     .iconyuyuepaishe,.iconkefu{
         font-size: 13px !important;
@@ -127,6 +130,13 @@
         display: flex;
         flex-direction: column;
     }
+    .become ul li div{
+        height: 54px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
     .become ul li img{
         margin-bottom: 17px;
     }
@@ -144,7 +154,7 @@
         height: 830px;
         min-width: 1366px;
         background: url(../../img/pc/photographer/bitmap.png) no-repeat;
-        background-size: 1920px 498px;
+        background-size: 2420px 498px;
         background-position: center;
         margin-bottom: 60px;
     }
@@ -268,7 +278,7 @@
         min-width: 1366px;
         height: 250px;
         background: url(../../img/pc/photographer/bejoin.png)no-repeat;
-        background-size: 1920px 250px;
+        background-size: cover;
         background-position: center;
     }
     .joinUs_dic{
@@ -308,5 +318,13 @@
         font-size: 14px;
         text-align: center;
         margin: 40px auto 0;
+    }
+    #newBridge .icon-right-bottom ,.nb-icon-inner-wrap{
+        right: 30px !important;
+        top:210px !important;
+        background: rgba(0, 0, 0, 0) !important;
+    }
+    .joinBtn:hover,.joinusbtn:hover{
+        cursor: pointer;
     }
 }

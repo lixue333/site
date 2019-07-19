@@ -33,6 +33,11 @@
     }
 }
 @media screen and (min-width: 769px) {
+    .tc{
+        width: 100%;
+        height: 6px;
+        background: #33496A;
+    }
     header{
         width: 100%;
         height: 53px;
@@ -41,14 +46,17 @@
         position: absolute;
         top: 0px;
         z-index: 99;
+        transition: all 3s;
+        margin-top: 6px;
     }
     .index_header{
         background:linear-gradient(180deg,rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
+        margin-top: 6px;
     }
     .top_bar{
         width: 1200px;
         height: 100%;
-        margin: 0 auto;
+        margin: 0 auto 0;
         display: flex;
         justify-content: space-between;
     }
@@ -56,13 +64,14 @@
         display: flex;
         justify-content: space-between;
         flex: 1;
+        align-items: center;
     }
     .top_bar_left img{
         height: 23px;
-        margin-top: 14px;
+        
     }
     .top_bar_left span{
-        font-size: 12px;
+        font-size: 16px;
         color: #fff;
         font-family:SourceHanSansCN-Normal;
         font-weight: 200;
@@ -72,12 +81,12 @@
         display: flex;
     }
     .top_bar_right li{
-        width: 70px;
+        width: 80px;
         margin-left: 30px;
         text-align: center;
     }
     .top_bar_right li a{
-        font-size: 12px;
+        font-size: 16px;
         color: #fff;
         font-weight: 200;
         font-family:SourceHanSansCN-Normal;
@@ -98,6 +107,176 @@
     .headerh5{
         display: none;
     }
+    .dialog{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99999999999;
+        background:rgba(0,0,0,0.6); 
+    }
+    .dialog .center_box .make_appointment{
+        height: 570px;
+    }
+    .dialog .center_box .make_appointment h1{
+        margin-bottom: 20px;
+    }
+    .dialog .center_box{
+        width: 780px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -390px;
+        margin-top: -285px;
+    }
+    .dialog .close{
+        position: absolute;
+        right: 30px;
+        top: 53px;
+    }
+    .center_box h1{
+        font-size:20px;
+        font-family:SourceHanSansCN-Heavy;
+        font-weight:800;
+        color:rgba(74,104,154,1);
+        line-height:24px;
+        letter-spacing:1px;
+        text-shadow:3px 3px 8px rgba(255,255,255,1);
+        text-align: center;
+    }
+        /*预约拍摄*/
+    .make_appointment{
+        width:780px;
+        height:478px;
+        background:rgba(255,255,255,1);
+        box-shadow:5px 6px 30px 0px rgba(221,234,255,1);
+        border-radius:10px;
+        margin: 34px auto 0;
+        padding: 50px 120px 30px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .make_appointment .from_group{
+        display: flex;
+        flex-direction: column;
+    }
+    .make_appointment .from_group input{
+        border: none;
+        outline: none;
+        height: 30px;
+        background: rgba(0, 0, 0, 0)
+    }
+    .make_appointment .from_group label{
+        font-size:16px;
+        font-family:SourceHanSansCN-Heavy;
+        font-weight:800;
+        color:rgba(74,104,154,1);
+        
+    }
+    .make_appointment .from_group{
+        width: 100%;
+        border-bottom: 1px solid #F0F0F0;
+        padding-left: 20px;
+        padding-bottom: 4px;
+        padding-top: 5px;
+        box-sizing: border-box;
+    }
+    .make_appointment .from_group:nth-last-of-type(1){
+        border:none;
+    }
+    .make_appointment .sp{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    /* .make_appointment .from_group input::-webkit-input-placeholder {
+        color: #9B9B9B;
+        font-size: 14px;
+    } */
+    .make_appointment .getCode{
+        width:70px;
+        height:14px;
+        font-size:14px;
+        font-family:SourceHanSansCN-Heavy;
+        font-weight:800;
+        color:rgba(74,104,154,1);
+        line-height:21px;
+    }
+    .appointmentBtn{
+        width:230px;
+        height:38px;
+        background:linear-gradient(135deg,rgba(97,131,174,1) 0%,rgba(56,87,140,1) 100%);
+        border-radius:20px;
+        margin: 12px auto 0;
+        text-align: center;
+        line-height: 38px;
+        color: #fff;
+        font-size: 14px;
+    }
+    .appointmentBtn:hover,.make_appointment .getCode:hover{
+        cursor: pointer;
+    }
+    /*预约成功*/
+    .appointment_succee{
+        width:780px;
+        height:478px;
+        background:rgba(255,255,255,1);
+        box-shadow:5px 6px 30px 0px rgba(221,234,255,1);
+        border-radius:10px;
+        margin: 34px auto 0;
+        padding: 20px;
+        box-sizing: border-box;
+        position: relative;
+    }
+    .close .close_img{
+        width: 26px;
+        float:right;
+    }
+    .succes_img{
+        width: 48px;
+        margin: 46px auto 22px;
+    }
+    .appointment_succee p{
+        font-size:20px;
+        font-family:SourceHanSansCN-Normal;
+        font-weight:400;
+        color:rgba(0,0,0,1);
+        line-height:30px;
+        letter-spacing:1px;
+        text-align: center;
+        margin: 0;
+    }
+    .appointment_succee h3{
+        font-size:14px;
+        font-family:SourceHanSansCN-Heavy;
+        font-weight:900;
+        color:rgba(0,0,0,1);
+        line-height:21px;
+        text-align: center;
+    }
+    .appointment_succee h3:nth-of-type(1){
+        margin-top: 53px;
+    }
+    .appointment_succee h3:nth-of-type(2){
+        margin-top: 21px;
+    }
+    .appointment_succee h4{
+        font-size:14px;
+        font-family:SourceHanSansCN-Heavy;
+        font-weight:normal;
+        color:rgba(0,0,0,1);
+        line-height:21px;
+        text-align: center;
+    }
+    .code{
+        width: 80px;
+        margin: 0 auto;
+    }
+
 }
 @media screen and (max-width: 768px) {
     html{
@@ -126,12 +305,241 @@
     }
     .iconkediankai{
         color: #fff;
+        font-size: 0.14rem !important;
     }
+    .iconshouqitubiao{
+        color: #fff;
+        font-size: 0.12rem !important;
+    }
+    .headerbar{
+        width: 50vw;
+        height: 100vh;
+        background: #33496A;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: none;
+        z-index: 99999;
+    }
+    .headerbar li{
+        width: 1.2rem;
+        height: 0.4rem;
+        line-height: 0.4rem;
+        border-bottom: 0.01rem solid rgb(86,104,134);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: auto;
+    } 
+    .headerbar li:nth-of-type(1){
+        width: 100% !important;
+        color: #fff;
+        font-size: 0.12rem;
+        border-top: 0.01rem solid rgb(86,104,134);
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .coverbar{
+        width: 100vw;
+        height: 95vh;
+        background: rgba(0, 0, 0, 0.7);
+        position: fixed;
+        top: 0.44rem;
+        left: 0;
+        z-index: 9999;
+    }
+    .headerbar li:last-child(1){
+        border: none;
+    }
+    .headerbar li a{
+        color: #fff;
+        font-size: 0.16rem;
+        text-align: center;
+    }
+    .headerbar li a:hover{
+        color: #FFB400;
+    }
+    .headerbar li a.act{
+        color: #FFB400;
+    }
+    .icondianhua{
+        margin-left: 0.05rem;
+    }
+    .appointment_succee{
+        width:100vw;
+        height:4.23rem;
+        background:rgba(255,255,255,1);
+        padding: 0.2rem;
+        box-sizing: border-box;
+        position: fixed;
+        bottom: 0;
+        z-index:99999999;
+    }
+    .close .close_img{
+        width: 0.26rem;
+        float:right;
+    }
+    .succes_img{
+        width: 0.48rem;
+        margin: 0.46rem auto 0.22rem;
+    }
+    .appointment_succee p{
+        font-size:0.18rem;
+        font-family:SourceHanSansCN-Normal;
+        font-weight:400;
+        color:rgba(0,0,0,1);
+        line-height:0.25rem;
+        letter-spacing:1px;
+        text-align: center;
+        margin: 0;
+    }
+    .appointment_succee h3{
+        font-size:0.14rem;
+        font-family:SourceHanSansCN-Heavy;
+        font-weight:900;
+        color:rgba(0,0,0,1);
+        line-height:0.21rem;
+        text-align: center;
+    }
+    .appointment_succee h3:nth-of-type(1){
+        margin-top: 0.33rem;
+    }
+    .appointment_succee h3:nth-of-type(2){
+        margin-top: 0.18rem;
+    }
+    .appointment_succee h4{
+        font-size:0.14rem;
+        font-family:SourceHanSansCN-Heavy;
+        font-weight:normal;
+        color:rgba(0,0,0,1);
+        line-height:0.21rem;
+        text-align: center;
+    }
+    .code{
+        width: 0.8rem;
+        margin: 0 auto;
+
+    }.center_box h1{
+        font-size:0.14rem;
+        font-family:SourceHanSansCN-Heavy;
+        font-weight:800;
+        color:rgba(74,104,154,1);
+        line-height:0.24rem;
+        letter-spacing:1px;
+        text-shadow:3px 3px 8px rgba(255,255,255,1);
+        text-align: center;
+    }
+    .dialog{
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99999999;
+        background:rgba(0,0,0,0.6); 
+    }
+  /*预约拍摄*/
+  .make_appointment{
+    width:100vw;
+    height:5.23rem;
+    background:rgba(255,255,255,1);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 99999999;
+    padding: 0.2rem;
 }
+.make_appointment .from_group{
+    display: flex;
+    flex-direction: column;
+    height: auto; 
+     margin-bottom: 0; 
+}
+.make_appointment .from_group:nth-of-type(4) {
+    border-bottom: 1px solid #F0F0F0 !important;
+}
+
+.close {
+    width: 0.26rem;
+    position: absolute;
+    right: 0.2rem;
+    top: 0.2rem;
+}
+.make_appointment .from_group input{
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0)
+}
+.make_appointment .from_group label{
+    line-height: 0.2rem;
+    font-size:0.14rem;
+    font-family:SourceHanSansCN-Heavy;
+    font-weight:800;
+    color:rgba(74,104,154,1);
+}
+.make_appointment .from_group{
+    width: 100%;
+    border-bottom: 1px solid #F0F0F0;
+    padding: 0.1rem 0 0.1rem 0.2rem;
+    box-sizing: border-box;
+}
+.make_appointment .from_group:nth-last-of-type(1){
+    border:none;
+}
+.shoot_logo{
+    width: 1.92rem;
+    margin-top: 0.1rem;
+}
+.make_appointment .sp{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* .make_appointment .from_group input::-webkit-input-placeholder {
+    color: #9B9B9B;
+    font-size: 0.12rem;
+} */
+.make_appointment .getCode{
+    width:0.8rem;
+    height:0.14rem;
+    font-size:0.14rem;
+    font-family:SourceHanSansCN-Heavy;
+    font-weight:800;
+    color:rgba(74,104,154,1);
+    line-height:0.21rem;
+}
+.appointmentBtn{
+    width:2.3rem;
+    height:0.38rem;
+    background:linear-gradient(135deg,rgba(97,131,174,1) 0%,rgba(56,87,140,1) 100%);
+    border-radius:0.2rem;
+    margin: 0.12rem auto 0;
+    text-align: center;
+    line-height: 0.38rem;
+    color: #fff;
+    font-size: 0.14rem;
+}
+.appointmentBtn:hover,.make_appointment .getCode:hover{
+    cursor: pointer;
+}
+    }
+        
+
 
 .toast__dark{
     position: fixed;
-    z-index: 999;
+    z-index: 99999999999;
     background-color: rgba(0,0,0,.8);
     color:#fff;
     font-size: 14px;
@@ -139,4 +547,9 @@
     border-radius:4px; 
     top: 50%;
     left: 50%;
+    transform: translate3d(-50%,50%,0);
+    -webkit-transform: translate3d(-50%,50%,0);
+}
+.btn-group a:hover{
+    cursor: pointer;
 }

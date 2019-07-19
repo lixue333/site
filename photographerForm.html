@@ -3,188 +3,183 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>专业商业即时摄影_演出摄影_公关摄影等活动照片直播服务—谱时图片直播官网</title>
+    <meta name="description"
+        content="谱时活动云拍摄全案专家，即时活动图片直播、视频直播、视频快剪，3分钟快速获取活动精彩照片，可针对全国发布会、庆典、年会、展览、活动、沙龙、派对、讲座、课程、会议、文化演出、体育赛事等演出公关类活动进行摄影摄像拍摄。">
+    <meta name="keywords" content="谱时，云摄影，图片直播，照片直播，即时摄影摄像，视频直播，活动拍摄，公关拍摄，演出拍摄">
+    <title>谱时-活动云拍摄全案专家-演出摄影-公关摄影-活动摄影-图片直播服务-谱时图片直播官网</title>
     <link rel="stylesheet" href="./css/common/reset.css">
     <link rel="stylesheet" href="./css/common/head.css">
     <link rel="stylesheet" href="./css/pc/priorityShoot.css">
     <link rel="stylesheet" href="./css/h5/priorityShoot.css">
+    <link rel="stylesheet" href="./css/h5/photographerForm.css">
     <link rel="stylesheet" href="./css/common/footer.css">
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_1183008_khf6zbo14uh.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1183008_x9khyo4tzdr.css">
     <style>
-        .make_appointment {
-            height: 517px;
-        }
 
-        .appointment_succee {
-            height: 527px;
-        }
-
-        .make_appointment ul {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .make_appointment ul:nth-of-type(1) {
-            justify-content: space-between;
-        }
-
-        .make_appointment ul:nth-of-type(2) li {
-            width: 78px;
-        }
-
-        .make_appointment ul li a {
-            color: #9B9B9B;
-            font-size: 13px;
-        }
-
-        .none {
-            display: none;
-        }
-
-        .appointment_succee p {
-            font-size: 18px;
-        }
     </style>
 </head>
 
 <body>
-    <!--进度条-->
-    <div id="progress">
-        <span></span>
-    </div>
-    <!--首页头部-->
-    <header>
-        <div class="top_bar">
-            <ul class="top_bar_left">
-                <li>
-                    <a href="./index.html">
-                        <img src="img/pc/index/logoy.png">
-                    </a>
-                </li>
-                <li>
-                    <i class="iconfont icondianhua"></i>
-                    <span>400-101-0660</span>
-                </li>
-            </ul>
-            <ul class="top_bar_right">
-                <li>
-                    <a href="./index.html">首页</a>
-                </li>
-                <li>
-                    <a href="./priorityShoot.html">预约拍摄</a>
-                </li>
-                <li>
-                    <a href="./projects.html">精选案例</a>
-                </li>
-                <li>
-                    <a href="./enterpriseNews.html">企业新闻</a>
-                </li>
-                <li>
-                    <a href="./photographer.html" class="act">成为摄影师</a>
-                </li>
-                <li>
-                    <a href="./about.html">关于谱时</a>
-                </li>
-                <li>
-                    <a href="./question.html">常见问题</a>
-                </li>
-            </ul>
-        </div>
-    </header>
-    <!--背景-->
-    <div class="shoot_bg">
-        <div class="center_box">
-            <img class="shoot_logo" src="./img/pc/priorityShoot/ylogo.png" />
-            <h1>活动云拍摄全案专家</h1>
-            <!--立即预约-->
-            <div class="make_appointment">
-                <div class="from_group">
-                    <label>如何称呼您</label>
-                    <input type="text" placeholder="请在这里输入">
-                </div>
-                <div class="from_group">
-                    <label>您的手机号码</label>
-                    <input type="text" placeholder="请在这里输入">
-                </div>
-                <div class="from_group">
-                    <label>验证码</label>
-                    <div class="sp">
-                        <input type="text" placeholder="请在这里输入" />
-                        <a class="getCode">获取验证码</a>
+    <div class="joinalert">
+        <div class="coverdialog">
+            <div class="wrap">
+                <div class="center_box">
+                    <img src="./img/pc/priorityShoot/close.png" class="close">
+                    <img class="shoot_logo" src="./img/pc/priorityShoot/ylogo.png" />
+                    <h1>活动云拍摄全案专家</h1>
+                    <!--立即预约-->
+                    <div class="make_appointment" id="beCameraer">
+                        <div class="from_group">
+                            <label>如何称呼您</label>
+                            <input type="text" name="name" placeholder="请在这里输入">
+                        </div>
+                        <div class="from_group">
+                            <label>您的手机号码</label>
+                            <input type="text" name="phone" placeholder="请在这里输入">
+                        </div>
+                        <div class="from_group">
+                            <label>验证码</label>
+                            <div class="sp">
+                                <input type="text" placeholder="请在这里输入" name="code" />
+                                <a class="getCode">获取验证码</a>
+                            </div>
+                        </div>
+                        <div class="from_group">
+                            <label>所在城市</label>
+                            <input type="text" placeholder="请在这里输入您要拍摄的城市所在地，例如：广东深圳">
+                        </div>
+                        <div class="from_group sc">
+                            <label>擅长拍摄领域</label>
+                            <ul class="checked">
+                                <li class="act add"><a href="" class="act">会议活动</a></li>
+                                <li class="add"><a>婚礼跟拍</a></li>
+                                <li class="add"><a>体育赛事</a></li>
+                                <li class="add"><a>时尚娱乐</a></li>
+                                <li class="add"><a>沙龙趴体</a></li>
+                                <li class="add"><a>商务肖像</a></li>
+                                <li class="add"><a>建筑空间</a></li>
+                            </ul>
+                            <ul class="checked">
+                                <li class="add"><a>产品静物</a></li>
+                                <li class="add"><a>美食电商</a></li>
+                                <li class="add"><a>婚纱写真</a></li>
+                            </ul>
+                        </div>
+                        <div class="from_group">
+                            <div class="appointmentBtn">提交申请</div>
+                        </div>
+                    </div>
+                    <!--预约成功-->
+                    <div class="appointment_succee none">
+                        <div class="close">
+                            <img src="./img/pc/priorityShoot/close.png" class="close_img">
+                        </div>
+                        <div class="succes">
+                            <img src="./img/pc/priorityShoot/succes.png" class="succes_img">
+                        </div>
+                        <p>您的申请已成功提交</p>
+                        <p>谱时的工作人员会以最快的速度与您取得联系</p>
+                        <p>请将简历及作品发送至 join@plusx.cn</p><br />
+                        <p>欢迎选择加入谱时图片直播签约摄影师</p>
+                        <h3>客服电话</h3>
+                        <h4>400-101-0660</h4>
+                        <h3>微信公众号</h3>
+                        <img src="./img/pc/priorityShoot/code.png" class="code">
                     </div>
                 </div>
-                <div class="from_group">
-                    <label>所在城市</label>
-                    <input type="text" placeholder="请在这里输入您要拍摄的城市所在地，例如：广东深圳">
-                </div>
-                <div class="from_group">
-                    <label>擅长拍摄领域</label>
-                    <ul>
-                        <li><a href="">会议活动</a></li>
-                        <li><a href="">婚礼跟拍</a></li>
-                        <li><a href="">体育赛事</a></li>
-                        <li><a href="">时尚娱乐</a></li>
-                        <li><a href="">沙龙趴体</a></li>
-                        <li><a href="">商务肖像</a></li>
-                        <li><a href="">建筑空间</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="">产品静物</a></li>
-                        <li><a href="">美食电商</a></li>
-                        <li><a href="">婚纱写真</a></li>
-                    </ul>
-                </div>
-                <div class="from_group">
-                    <div class="appointmentBtn">提交申请</div>
-                </div>
-            </div>
-            <!--预约成功-->
-            <div class="appointment_succee none">
-                <div class="close">
-                    <img src="./img/pc/priorityShoot/close.png" class="close_img">
-                </div>
-                <div class="succes">
-                    <img src="./img/pc/priorityShoot/succes.png" class="succes_img">
-                </div>
-                <p>您的申请已成功提交</p>
-                <p>谱时的工作人员会以最快的速度与您取得联系</p>
-                <p>请将简历及作品发送至 join@plusx.cn</p><br />
-                <p>欢迎选择加入谱时图片直播签约摄影师</p>
-                <h3>客服电话</h3>
-                <h4>400-101-0660</h4>
-                <h3>微信公众号</h3>
-                <img src="./img/pc/priorityShoot/code.png" class="code">
             </div>
         </div>
-    </div>
-    <!--首页底部-->
-    <footer>
-        <div class="bottom_last">
-            <div class="bottom_last_center">
-                <span>copyright © 2015-2019 PLUS</span>
-                <span>京ICP备15009106号-3</span>
-                <span>谱时图片直播-云活动拍摄全案专家</span>
+
+
+        <!--弹窗-->
+        <div class="dialog none">
+            <div class="center_box">
+                <!--立即预约-->
+                <div class="make_appointment">
+                    <img src="./img/pc/priorityShoot/close.png" class="close">
+                    <img class="shoot_logo" src="./img/pc/priorityShoot/ylogo.png" />
+                    <h1>活动云拍摄全案专家</h1>
+                    <div class="from_group">
+                        <label>如何称呼您</label>
+                        <input type="text" name="name" placeholder="请输入姓名">
+                    </div>
+                    <div class="from_group">
+                        <label>您的手机号码</label>
+                        <input type="text" name="phone" placeholder="请输入手机号">
+                    </div>
+                    <div class="from_group">
+                        <label>验证码</label>
+                        <div class="sp">
+                            <input type="text" name="code" placeholder="请输入验证码" />
+                            <a class="getCode">获取验证码</a>
+                        </div>
+                    </div>
+                    <div class="from_group">
+                        <label>拍摄城市</label>
+                        <input type="text" name="address" placeholder="请输入您要拍摄的城市所在地，例如：广东深圳">
+                    </div>
+                    <div class="from_group">
+                        <label>拍摄时间</label>
+                        <input type="text" name="time" placeholder="请输入您想要拍摄的时间，例如：2019-01-01至03">
+                    </div>
+                    <div class="from_group">
+                        <div class="appointmentBtn">立即预约</div>
+                    </div>
+                </div>
+                <!--预约成功-->
+                <div class="appointment_succee none">
+                    <div class="close">
+                        <img src="./img/pc/priorityShoot/close.png" class="close_img">
+                    </div>
+                    <div class="succes">
+                        <img src="./img/pc/priorityShoot/succes.png" class="succes_img">
+                    </div>
+                    <p>您的预约已成功提交</p>
+                    <p>客服将在2小时内与您取得联系，感谢您对谱时的支持</p>
+                    <h3>客服电话</h3>
+                    <h4>400-101-0660</h4>
+                    <h3>微信公众号</h3>
+                    <img src="./img/pc/priorityShoot/code.png" class="code">
+                </div>
             </div>
         </div>
-    </footer>
-    <!--移动端底部-->
-    <div class="bottom_h5 none">
-        <ul class="list_dic">
-            <li>产品<i class="iconfont iconchevron-r"></i></li>
-            <li>服务<i class="iconfont iconchevron-r"></i></li>
-            <li>公司<i class="iconfont iconchevron-r"></i></li>
-            <li>联系方式<i class="iconfont iconchevron-r"></i></li>
-        </ul>
-        <ul class="list_last">
-            <span>copyright © 2015-2019 PLUS</span>
-            <span>京ICP备15009106号-3</span>
-            <p>承影互联（北京）科技有限公司</p>
-        </ul>
     </div>
 </body>
 <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
 <script src="./js/common.js"></script>
+<script src="./js/head.js"></script>
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?e3b94bcaedc287f3efeeec269fbdfc4e";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script>
+    $('.getCode').click(function () {
+
+        if ($(this).text() == '获取验证码') {
+            console.log($(this).text())
+            getcode('#beCameraer')
+        }
+    })
+    $('.appointmentBtn').click(function () {
+        validform('#beCameraer')
+    })
+    $(".close_img").click(function () {
+        $(".appointment_succee").fadeOut(300);
+    })
+    $(".add").click(function () {
+        $(this).toggleClass("act");
+        $(this).children().toggleClass("act");
+    })
+    $(".close").click(function () {
+        $(".coverdialog").fadeOut(300);
+    })
+</script>
 
 </html>

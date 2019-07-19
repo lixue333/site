@@ -4,7 +4,7 @@
         min-width: 1366px;
         height: 57px;
         background: url(../../img/pc/index/footer.png)no-repeat;
-        background-size: 1920px 57px;
+        background-size: cover;
         background-position: center;
     }
     .bottom_last_center{
@@ -27,6 +27,44 @@
         float: right;
         line-height: 57px;
     }
+     /*底部列表*/
+     .bottom_list{
+        width: 100%;
+        min-width: 1366px;
+        height: 235px;
+        background: #33496A;
+    }
+    .bottom_list_center{
+        width: 1200px;
+        height: 205px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .bottom_list_center ul{
+        padding: 28px 0;
+        box-sizing: border-box;
+    }
+    .bottom_list_center ul li{
+        line-height: 34px;
+    }
+    .bottom_list_center ul li span{
+        font-size:18px;
+        font-family:SourceHanSansCN-Heavy;
+        font-weight:800;
+        color:rgba(255,255,255,1);
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+    .bottom_list_center ul li a{
+        font-size:16px;
+        font-family:SourceHanSansCN-Light;
+        font-weight:300;
+        color:rgba(255,255,255,1);
+    }
+    .none{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 769px) {
@@ -42,7 +80,7 @@
         flex-direction: column;
     }
     .list_dic li{
-        height: 0.45rem;
+        height: 0.4rem;
         color: #323232;
         font-size: 0.14rem;
         font-family:SourceHanSansCN-Normal;
@@ -52,6 +90,10 @@
         justify-content: space-between;
         align-items: center;
         font-family:SourceHanSansCN-Normal;
+        position: relative;
+    }
+    .list_dic_li{
+        height: 0.4rem;
     }
     .iconchevron-r{
         color: #F0F0F0;
@@ -77,5 +119,26 @@
         color:rgba(5,5,5,1);
         line-height:0.18rem;
         text-align: center;
+    }
+    .mobilefoot {
+        width: 100%;
+        display:none;     
+    }
+    .mobilefoot a{
+        color:rgba(5,5,5,1);
+    }
+    #nb_toolbar_dial{
+        display: none !important;
+    }
+    #newBridge #nb_toolbar_wrap{
+        width: 0.3rem !important;
+        height: 0.72rem !important;
+        right: 0.1rem !important;
+        top: 5.2rem !important;
+        left: auto !important;
+        opacity: 0 !important;
+    }
+    .bottom_list{
+        display: none;
     }
 }

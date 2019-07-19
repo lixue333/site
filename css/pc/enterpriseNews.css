@@ -4,7 +4,7 @@
         height: 300px;
         min-width: 1366px;
         background: url(../../img/pc/enterpriseNews/newsbanner.png) no-repeat;
-        background-size: 1920px 300px;
+        background-size:cover;
         background-position: center;
         overflow: hidden;
         margin-top: 53px;
@@ -75,9 +75,10 @@
         color: #FFB400;
     }
     .btn-group{
-        position: absolute;
-        right: -50px;
-        top: 108px;
+        position: fixed;
+        right: 90px;
+        top: 388px;
+        z-index: 999;
     }
     .btn-group .order{
         width:32px;
@@ -92,6 +93,7 @@
         text-align: center;
         padding: 10px 11px;
         box-sizing: border-box;
+        color: #000;
     }
     .btn-group .service{
         width:32px;
@@ -107,11 +109,17 @@
         padding: 10px 11px;
         box-sizing: border-box;
         margin-top: 20px;
+        color: #000;
     }
     .iconyuyuepaishe,.iconkefu{
         font-size: 13px !important;
     }
     .iconyuyuepaishe,.iconkefu{
         font-size: 13px !important;
+    }
+    #newBridge .icon-right-bottom ,.nb-icon-inner-wrap{
+        right: 30px !important;
+        top:250px !important;
+        background: rgba(0, 0, 0, 0)  !important;
     }
 }
